@@ -1,0 +1,249 @@
+/* ===================================================== */
+/* PAGE BACKGROUND                                      */
+/* ===================================================== */
+.web-page {
+  min-height: 100vh;
+  background: url("/web-bg.png") center / cover no-repeat;
+}
+
+/* OVERLAY */
+.web-page .web-overlay {
+  min-height: 100vh;
+  background: rgba(10, 5, 40, 0.75);
+  padding: 90px 20px;
+  color: #ffffff;
+}
+
+/* ===================================================== */
+/* HERO SECTION                                        */
+/* ===================================================== */
+.web-page .web-hero {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.web-page .hero-icon {
+  font-size: 46px;
+  color: #a78bfa; /* muted purple accent */
+  margin-bottom: 18px;
+}
+
+.web-page .web-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #a78bfa;
+}
+
+.web-page .web-hero p {
+  font-size: 1.12rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* ===================================================== */
+/* FEATURES SECTION                                     */
+/* ===================================================== */
+.web-page .web-features {
+  max-width: 1100px;
+  margin: 0 auto 70px auto;
+  text-align: center;
+}
+
+.web-page .web-features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 45px;
+  color: #a78bfa;
+}
+
+/* GRID */
+.web-page .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+/* FEATURE CARD */
+.web-page .feature-card {
+  background: linear-gradient(110deg, #02028193, rgba(101, 70, 236, 0.776)); /* dark glass */
+  border-radius: 18px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.web-page .feature-card h3 {
+  margin: 14px 0;
+  color: #ffffff;
+}
+
+.web-page .feature-card p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+}
+
+/* ICONS */
+.web-page .icon {
+  font-size: 32px;
+  color: #a78bfa;
+}
+
+/* READ MORE */
+.web-page .read-more-btn {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.web-page .read-more-btn:hover {
+  color: #d8caff;
+  text-decoration: underline;
+}
+
+.web-page .read-more-text {
+  margin-top: 12px;
+  animation: expandFade 0.35s ease-in-out;
+  color: #f5f5ff;
+}
+
+/* ACTION BUTTONS */
+.web-page .web-action {
+  text-align: center;
+  margin-top: 20px;
+}
+.web-page .web-action a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
+.web-page .web-action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  background: #7c3aed;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.web-page .note {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.9;
+}
+
+/* ===================================================== */
+/* HOW TO USE SECTION */
+/* ===================================================== */
+.web-page .web-how {
+  max-width: 900px;
+  margin: 90px auto 0 auto;
+  /* align list left for readability */
+  text-align: left;
+  animation: howFadeUp 0.9s ease forwards;
+  padding: 0 20px;
+}
+
+.web-page .web-how h2 {
+  font-size: 2.2rem;
+  margin-bottom: 36px;
+  color: #a78bfa;
+  text-align: center; /* keep heading centered */
+}
+
+.web-page .how-list {
+  list-style-position: inside; /* show numbering for <ol> */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.web-page .how-list li {
+  position: relative;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: linear-gradient(110deg, rgb(57, 57, 225), rgba(79, 49, 216, 0.776));
+  color: #f5f5ff;
+  font-size: 1rem;
+  line-height: 1.65;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.web-page .how-list li ol {
+  list-style: decimal inside;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.web-page .how-list li::before {
+  content: none;
+}
+
+/* ===================================================== */
+/* KEYFRAMES                                             */
+/* ===================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expandFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes howFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes howGlowPulse {
+  0% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.4); }
+  50% { box-shadow: 0 0 22px rgba(167, 139, 250, 0.85); }
+  100% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.4); }
+}
+
+/* ===================================================== */
+/* RESPONSIVE                                            */
+/* ===================================================== */
+@media (max-width: 640px) {
+  .web-page .web-overlay {
+    padding: 72px 16px;
+  }
+
+  .web-page .web-hero h1 {
+    font-size: 2rem;
+  }
+
+  .web-page .web-hero p {
+    font-size: 1rem;
+  }
+
+  .web-page .feature-card {
+    padding: 24px;
+  }
+
+  .web-page .how-list li {
+    padding-left: 36px;
+  }
+}
