@@ -1,5 +1,5 @@
 /* ===================================================== */
-/* PAGE BACKGROUND                                      */
+/* PAGE BACKGROUND                                       */
 /* ===================================================== */
 .web-page {
   min-height: 100vh;
@@ -10,67 +10,68 @@
 .web-page .web-overlay {
   min-height: 100vh;
   background: rgba(10, 5, 40, 0.75);
-  padding: 90px 20px;
+  padding: clamp(56px, 10vw, 90px) clamp(12px, 4vw, 20px);
   color: #ffffff;
 }
 
 /* ===================================================== */
-/* HERO SECTION                                        */
+/* HERO SECTION                                          */
 /* ===================================================== */
 .web-page .web-hero {
   max-width: 900px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto clamp(56px, 12vw, 80px);
   text-align: center;
   animation: fadeIn 1s ease forwards;
 }
 
 .web-page .hero-icon {
-  font-size: 46px;
-  color: #a78bfa; /* muted purple accent */
-  margin-bottom: 18px;
+  font-size: clamp(30px, 6vw, 46px);
+  color: #a78bfa;
+  margin-bottom: clamp(12px, 3vw, 18px);
 }
 
 .web-page .web-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  margin-bottom: clamp(14px, 3vw, 20px);
   color: #a78bfa;
+  line-height: clamp(1.25, 1.3, 1.35);
 }
 
 .web-page .web-hero p {
-  font-size: 1.12rem;
+  font-size: clamp(0.9rem, 2.6vw, 1.12rem);
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: clamp(1.5, 1.65, 1.7);
   color: #cbd5e1;
 }
 
 /* ===================================================== */
-/* FEATURES SECTION                                     */
+/* FEATURES SECTION                                      */
 /* ===================================================== */
 .web-page .web-features {
   max-width: 1100px;
-  margin: 0 auto 70px auto;
+  margin: 0 auto clamp(48px, 10vw, 70px);
   text-align: center;
 }
 
 .web-page .web-features h2 {
-  font-size: 2.2rem;
-  margin-bottom: 45px;
+  font-size: clamp(1.45rem, 4.5vw, 2.2rem);
+  margin-bottom: clamp(28px, 7vw, 45px);
   color: #a78bfa;
 }
 
 /* GRID */
 .web-page .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(20px, 5vw, 32px);
 }
 
 /* FEATURE CARD */
 .web-page .feature-card {
-  background: linear-gradient(110deg, #02028193, rgba(101, 70, 236, 0.776)); /* dark glass */
-  border-radius: 18px;
-  padding: 30px;
+  background: linear-gradient(110deg, #02028193, rgba(101, 70, 236, 0.776));
+  border-radius: clamp(14px, 3vw, 18px);
+  padding: clamp(18px, 5vw, 30px);
   text-align: left;
   box-shadow: 0 10px 28px rgba(0,0,0,0.5);
   border: 1px solid rgba(167, 139, 250, 0.25);
@@ -78,25 +79,26 @@
 }
 
 .web-page .feature-card h3 {
-  margin: 14px 0;
+  margin: clamp(10px, 3vw, 14px) 0;
   color: #ffffff;
+  font-size: clamp(0.95rem, 3vw, 1.15rem);
 }
 
 .web-page .feature-card p {
-  font-size: 0.96rem;
-  line-height: 1.65;
+  font-size: clamp(0.85rem, 2.4vw, 0.96rem);
+  line-height: clamp(1.5, 1.6, 1.65);
   color: #cbd5e1;
 }
 
 /* ICONS */
 .web-page .icon {
-  font-size: 32px;
+  font-size: clamp(24px, 5vw, 32px);
   color: #a78bfa;
 }
 
 /* READ MORE */
 .web-page .read-more-btn {
-  margin-top: 14px;
+  margin-top: clamp(10px, 3vw, 14px);
   background: none;
   border: none;
   color: #a78bfa;
@@ -111,29 +113,27 @@
 }
 
 .web-page .read-more-text {
-  margin-top: 12px;
+  margin-top: clamp(10px, 3vw, 12px);
   animation: expandFade 0.35s ease-in-out;
   color: #f5f5ff;
 }
 
-/* ACTION BUTTONS */
+/* ===================================================== */
+/* ACTION BUTTONS                                        */
+/* ===================================================== */
 .web-page .web-action {
   text-align: center;
-  margin-top: 20px;
-}
-.web-page .web-action a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  margin-top: clamp(16px, 4vw, 20px);
 }
 
 .web-page .web-action a {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 36px;
-  border-radius: 16px;
+  gap: clamp(10px, 3vw, 12px);
+  padding: clamp(14px, 4vw, 16px) clamp(22px, 6vw, 36px);
+  border-radius: clamp(14px, 3vw, 16px);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.88rem, 2.6vw, 1rem);
   color: #ffffff;
   text-decoration: none;
   background: #7c3aed;
@@ -141,34 +141,38 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.web-page .web-action a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
 .web-page .note {
-  margin-top: 16px;
-  font-size: 0.9rem;
+  margin-top: clamp(12px, 3vw, 16px);
+  font-size: clamp(0.78rem, 2.2vw, 0.9rem);
   color: white;
   opacity: 0.9;
 }
 
 /* ===================================================== */
-/* HOW TO USE SECTION */
+/* HOW TO USE SECTION                                    */
 /* ===================================================== */
 .web-page .web-how {
   max-width: 900px;
-  margin: 90px auto 0 auto;
-  /* align list left for readability */
+  margin: clamp(64px, 14vw, 90px) auto 0;
   text-align: left;
   animation: howFadeUp 0.9s ease forwards;
-  padding: 0 20px;
+  padding: 0 clamp(10px, 3vw, 20px);
 }
 
 .web-page .web-how h2 {
-  font-size: 2.2rem;
-  margin-bottom: 36px;
+  font-size: clamp(1.45rem, 4.5vw, 2.2rem);
+  margin-bottom: clamp(24px, 6vw, 36px);
   color: #a78bfa;
-  text-align: center; /* keep heading centered */
+  text-align: center;
 }
 
 .web-page .how-list {
-  list-style-position: inside; /* show numbering for <ol> */
+  list-style-position: inside;
   padding: 0;
   margin: 0 auto;
   max-width: 640px;
@@ -176,13 +180,13 @@
 
 .web-page .how-list li {
   position: relative;
-  padding: 16px 20px;
-  margin-bottom: 18px;
-  border-radius: 16px;
+  padding: clamp(14px, 4vw, 16px) clamp(14px, 4vw, 20px);
+  margin-bottom: clamp(14px, 4vw, 18px);
+  border-radius: clamp(14px, 3vw, 16px);
   background: linear-gradient(110deg, rgb(57, 57, 225), rgba(79, 49, 216, 0.776));
   color: #f5f5ff;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: clamp(0.88rem, 2.4vw, 1rem);
+  line-height: clamp(1.5, 1.6, 1.65);
   box-shadow: 0 10px 28px rgba(0,0,0,0.45);
   border: 1px solid rgba(167, 139, 250, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -215,35 +219,4 @@
 @keyframes howFadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes howGlowPulse {
-  0% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.4); }
-  50% { box-shadow: 0 0 22px rgba(167, 139, 250, 0.85); }
-  100% { box-shadow: 0 0 10px rgba(167, 139, 250, 0.4); }
-}
-
-/* ===================================================== */
-/* RESPONSIVE                                            */
-/* ===================================================== */
-@media (max-width: 640px) {
-  .web-page .web-overlay {
-    padding: 72px 16px;
-  }
-
-  .web-page .web-hero h1 {
-    font-size: 2rem;
-  }
-
-  .web-page .web-hero p {
-    font-size: 1rem;
-  }
-
-  .web-page .feature-card {
-    padding: 24px;
-  }
-
-  .web-page .how-list li {
-    padding-left: 36px;
-  }
 }

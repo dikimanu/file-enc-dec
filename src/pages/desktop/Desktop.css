@@ -1,5 +1,5 @@
 /* ===================================================== */
-/* PAGE BACKGROUND                                        */
+/* PAGE BACKGROUND                                       */
 /* ===================================================== */
 .desktop-page {
   min-height: 100vh;
@@ -10,7 +10,7 @@
 .desktop-page .desktop-overlay {
   min-height: 100vh;
   background: rgba(0, 0, 0, 0.75);
-  padding: 90px 20px;
+  padding: clamp(56px, 10vw, 90px) clamp(12px, 4vw, 20px);
   color: #f2efef;
 }
 
@@ -19,29 +19,30 @@
 /* ===================================================== */
 .desktop-page .desktop-hero {
   max-width: 900px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto clamp(56px, 12vw, 80px);
   text-align: center;
   animation: fadeIn 1s ease forwards;
 }
 
 .desktop-page .hero-icon {
-  font-size: 48px;
-  color: #f6a104; /* subtle green accent */
-  margin-bottom: 18px;
+  font-size: clamp(32px, 6vw, 48px);
+  color: #f6a104;
+  margin-bottom: clamp(12px, 3vw, 18px);
 }
 
 .desktop-page .desktop-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  margin-bottom: clamp(14px, 3vw, 20px);
   color: #f6a104;
+  line-height: clamp(1.25, 1.3, 1.35);
 }
 
 .desktop-page .desktop-hero p {
-  font-size: 1.12rem;
+  font-size: clamp(0.9rem, 2.6vw, 1.12rem);
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.7;
-  color: #cbd5e1; /* muted text */
+  line-height: clamp(1.5, 1.65, 1.7);
+  color: #cbd5e1;
   opacity: 0.95;
 }
 
@@ -50,29 +51,29 @@
 /* ===================================================== */
 .desktop-page .desktop-features {
   max-width: 1100px;
-  margin: 0 auto 70px auto;
+  margin: 0 auto clamp(48px, 10vw, 70px);
   text-align: center;
 }
 
 .desktop-page .desktop-features h2 {
-  font-size: 2.2rem;
-  margin-bottom: 45px;
+  font-size: clamp(1.45rem, 4.5vw, 2.2rem);
+  margin-bottom: clamp(28px, 7vw, 45px);
   color: #f6a104;
 }
 
 /* FEATURE GRID */
 .desktop-page .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(20px, 5vw, 32px);
 }
 
 /* FEATURE CARD */
 .desktop-page .feature-card {
-  background: linear-gradient(110deg, rgb(26, 26, 30), rgba(97, 97, 110, 0.635)); /* dark glass */
+  background: linear-gradient(110deg, rgb(26, 26, 30), rgba(97, 97, 110, 0.635));
   backdrop-filter: blur(12px);
-  border-radius: 18px;
-  padding: 30px;
+  border-radius: clamp(14px, 3vw, 18px);
+  padding: clamp(18px, 5vw, 30px);
   text-align: left;
   box-shadow: 0 10px 28px rgba(0,0,0,0.5);
   border: 1px solid rgba(127,191,74,0.2);
@@ -85,25 +86,26 @@
 }
 
 .desktop-page .feature-card h3 {
-  margin: 14px 0;
+  margin: clamp(10px, 3vw, 14px) 0;
   color: #ffffff;
+  font-size: clamp(0.95rem, 3vw, 1.15rem);
 }
 
 .desktop-page .feature-card p {
-  font-size: 0.96rem;
-  line-height: 1.65;
+  font-size: clamp(0.85rem, 2.4vw, 0.96rem);
+  line-height: clamp(1.5, 1.6, 1.65);
   color: #cbd5e1;
 }
 
 /* ICONS */
 .desktop-page .icon {
-  font-size: 34px;
+  font-size: clamp(26px, 5vw, 34px);
   color: #f6a104;
 }
 
 /* READ MORE */
 .desktop-page .read-more-btn {
-  margin-top: 14px;
+  margin-top: clamp(10px, 3vw, 14px);
   background: none;
   border: none;
   color: #f6a104;
@@ -117,25 +119,27 @@
 }
 
 .desktop-page .read-more-text {
-  margin-top: 12px;
+  margin-top: clamp(10px, 3vw, 12px);
   animation: expandFade 0.35s ease-in-out;
   color: #fefefe;
 }
 
-/* DOWNLOAD / ACTION */
+/* ===================================================== */
+/* DOWNLOAD / ACTION                                     */
+/* ===================================================== */
 .desktop-page .desktop-action {
   text-align: center;
-  margin-top: 20px;
+  margin-top: clamp(16px, 4vw, 20px);
 }
 
 .desktop-page .desktop-action a {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 36px;
-  border-radius: 16px;
+  gap: clamp(10px, 3vw, 14px);
+  padding: clamp(14px, 4vw, 16px) clamp(22px, 6vw, 36px);
+  border-radius: clamp(14px, 3vw, 16px);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.88rem, 2.6vw, 1rem);
   color: #ffffff;
   text-decoration: none;
   background: #f67104;
@@ -149,33 +153,32 @@
 }
 
 .desktop-page .note {
-  margin-top: 16px;
-  font-size: 0.9rem;
+  margin-top: clamp(12px, 3vw, 16px);
+  font-size: clamp(0.78rem, 2.2vw, 0.9rem);
   color: #a1a1aa;
   opacity: 0.9;
 }
 
 /* ===================================================== */
-/* HOW TO USE SECTION */
+/* HOW TO USE SECTION                                    */
 /* ===================================================== */
 .desktop-page .desktop-how {
   max-width: 900px;
-  margin: 90px auto 0 auto;
-  /* Remove center-align to allow list numbers */
+  margin: clamp(64px, 14vw, 90px) auto 0;
   text-align: left;
   animation: howFadeUp 0.9s ease forwards;
-  padding: 0 20px;
+  padding: 0 clamp(10px, 3vw, 20px);
 }
 
 .desktop-page .desktop-how h2 {
-  font-size: 2.2rem;
-  margin-bottom: 36px;
+  font-size: clamp(1.45rem, 4.5vw, 2.2rem);
+  margin-bottom: clamp(24px, 6vw, 36px);
   color: #f6a104;
-  text-align: center; /* keep heading centered */
+  text-align: center;
 }
 
 .desktop-page .how-list {
-  list-style-position: inside; /* show numbering inside the box */
+  list-style-position: inside;
   padding: 0;
   margin: 0 auto;
   max-width: 640px;
@@ -183,33 +186,20 @@
 
 .desktop-page .how-list li {
   position: relative;
-  padding: 16px 20px;
-  margin-bottom: 18px;
-  border-radius: 16px;
+  padding: clamp(14px, 4vw, 16px) clamp(14px, 4vw, 20px);
+  margin-bottom: clamp(14px, 4vw, 18px);
+  border-radius: clamp(14px, 3vw, 16px);
   background: linear-gradient(110deg, rgb(26, 26, 30), rgba(97, 97, 110, 0.635));
   backdrop-filter: blur(12px);
   color: #fefefe;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: clamp(0.88rem, 2.4vw, 1rem);
+  line-height: clamp(1.5, 1.6, 1.65);
   box-shadow: 0 10px 28px rgba(0,0,0,0.5);
   border: 1px solid rgba(127,191,74,0.2);
 }
 
-/* Optional: add numbering style for sublists */
-.desktop-page .how-list li ol {
-  list-style: decimal inside;
-  margin-top: 10px;
-  margin-bottom: 0;
-  padding-left: 20px;
-}
-
-/* Remove bullet dots for top-level list if using <ol> numbering */
-.desktop-page .how-list li::before {
-  content: none;
-}
-
 /* ===================================================== */
-/* KEYFRAMES                                              */
+/* KEYFRAMES                                             */
 /* ===================================================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(24px); }
@@ -224,29 +214,4 @@
 @keyframes howFadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===================================================== */
-/* RESPONSIVE                                             */
-/* ===================================================== */
-@media (max-width: 640px) {
-  .desktop-page .desktop-overlay {
-    padding: 72px 16px;
-  }
-
-  .desktop-page .desktop-hero h1 {
-    font-size: 2rem;
-  }
-
-  .desktop-page .desktop-hero p {
-    font-size: 1rem;
-  }
-
-  .desktop-page .feature-card {
-    padding: 24px;
-  }
-
-  .desktop-page .how-list li {
-    padding-left: 36px;
-  }
 }
